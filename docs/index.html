@@ -14,4 +14,10 @@
   This is a doc page.
   <div id="app"></div>
 </body>
+  <script>
+    fetch('./data/aaa.json').then(async (res) => {
+      var data = await res.json()
+      document.getElementById('app').innerHTML = data.name
+    })
+  </script>
 </html>
